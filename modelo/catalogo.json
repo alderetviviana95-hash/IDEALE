@@ -1,0 +1,105 @@
+{
+  "modelos_por_marca": {
+    "Chevrolet": [
+      "Captiva",
+      "Joy",
+      "Onix",
+      "Sail",
+      "Spark",
+      "Tracker"
+    ],
+    "Ford": [
+      "EcoSport",
+      "Escape",
+      "Explorer",
+      "Fiesta",
+      "Focus",
+      "Ranger"
+    ],
+    "Honda": [
+      "Accord",
+      "CR-V",
+      "City",
+      "Civic",
+      "Fit",
+      "HR-V"
+    ],
+    "Hyundai": [
+      "Accent",
+      "Creta",
+      "Elantra",
+      "Santa Fe",
+      "Tucson",
+      "i10"
+    ],
+    "Kia": [
+      "Cerato",
+      "Picanto",
+      "Rio",
+      "Seltos",
+      "Sorento",
+      "Sportage"
+    ],
+    "Mazda": [
+      "BT-50",
+      "CX-30",
+      "CX-5",
+      "Mazda 2",
+      "Mazda 3",
+      "Mazda 6"
+    ],
+    "Nissan": [
+      "Frontier",
+      "Kicks",
+      "March",
+      "Sentra",
+      "Versa",
+      "X-Trail"
+    ],
+    "Renault": [
+      "Duster",
+      "Koleos",
+      "Kwid",
+      "Logan",
+      "Sandero",
+      "Stepway"
+    ],
+    "Toyota": [
+      "Corolla",
+      "Fortuner",
+      "Hilux",
+      "Prado",
+      "RAV4",
+      "Yaris"
+    ],
+    "Volkswagen": [
+      "Amarok",
+      "Gol",
+      "Jetta",
+      "Polo",
+      "Tiguan"
+    ]
+  },
+  "combustibles": [
+    "Diesel",
+    "Gasolina"
+  ],
+  "transmisiones": [
+    "Automatico",
+    "Manual"
+  ],
+  "estados": [
+    "Nuevo 0 km",
+    "Buen estado",
+    "Segunda mano",
+    "Medio estado",
+    "Mal estado"
+  ],
+  "anio_min": 2000,
+  "anio_max": 2026,
+  "km_max": 485062,
+  "mejor_modelo": "Red neuronal (MLP)",
+  "anio_actual": 2026,
+  "fecha_entrenamiento": "2026-11-03 17:33:53",
+  "nodos_red_neuronal": "20"
+}

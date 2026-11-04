@@ -1,0 +1,76 @@
+======================================================================
+IDEALE - REGISTRO DE ENTRENAMIENTO
+Inicio : 2026-11-03 17:33:49
+Equipo : CristianBaquero | Python 3.11.9
+======================================================================
+
+>>> PASO 1 - Generar precios del dataset  (17:33:49)
+----------------------------------------------------------------------
+Registros: 1000
+CSV  -> C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\data\dataset_ideale_con_precio.csv
+ARFF -> C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\data\weka\dataset_ideale_con_precio.arff
+
+Resumen del precio (COP):
+count          1,000
+mean      59,103,000
+std       55,646,885
+min        5,000,000
+25%       20,675,000
+50%       39,300,000
+75%       81,500,000
+max      411,100,000
+Name: precio, dtype: str
+
+Ejemplos:
+     marca   modelo  anio combustible transmision  kilometraje       estado    precio
+    Toyota Fortuner  2026    Gasolina  Automatico        14897  Buen estado 268600000
+   Renault  Stepway  2016    Gasolina  Automatico       172770  Buen estado  22200000
+     Honda      Fit  2018    Gasolina      Manual        96833 Medio estado  29400000
+     Mazda     CX-5  2024    Gasolina  Automatico        43125  Buen estado 136200000
+Volkswagen   Amarok  2026      Diesel  Automatico            0   Nuevo 0 km 206400000
+    Toyota    Yaris  2019    Gasolina      Manual       125407  Buen estado  28600000
+    Toyota    Yaris  2019    Gasolina  Automatico       118000 Segunda mano  29000000
+Volkswagen      Gol  2015    Gasolina      Manual       126373 Medio estado  13600000
+--- paso1_generar_precios.py: OK (1.2 s)
+
+>>> PASO 2 - Entrenar y evaluar los modelos  (17:33:51)
+----------------------------------------------------------------------
+Registros cargados: 1000
+Registros tras limpieza: 1000 (eliminados: 0)
+Entrenamiento: 800 | Prueba: 200
+
+Experimento de nodos - Red neuronal (MLP):
+  MLP      3 nodos  R2 CV=0.9746  R2 prueba=0.9736  MAE=   4,490,730  (635 epocas, 1.0s)
+  MLP      5 nodos  R2 CV=0.9754  R2 prueba=0.9782  MAE=   4,388,562  (553 epocas, 1.1s)
+  MLP     10 nodos  R2 CV=0.9787  R2 prueba=0.9698  MAE=   5,036,763  (267 epocas, 0.6s)
+  MLP     20 nodos  R2 CV=0.9818  R2 prueba=0.9791  MAE=   4,393,109  (387 epocas, 1.9s)
+  MLP     50 nodos  R2 CV=0.9794  R2 prueba=0.9833  MAE=   4,189,422  (307 epocas, 1.9s)
+  MLP   10,5 nodos  R2 CV=0.9798  R2 prueba=0.9832  MAE=   4,210,654  (376 epocas, 2.2s)
+  MLP  20,10 nodos  R2 CV=0.9762  R2 prueba=0.9794  MAE=   4,081,873  (275 epocas, 1.8s)
+  >>> Mejor red neuronal: 20 nodos
+
+Comparacion de modelos:
+Regresion lineal   MAE=   5,030,268  RMSE=   7,977,826  R2=0.9767  CV=0.9764±0.0033  (0.03s)
+Random Forest      MAE=  12,767,220  RMSE=  21,864,970  R2=0.8247  CV=0.8127±0.0581  (0.45s)
+Gradient Boosting  MAE=   9,439,103  RMSE=  15,461,474  R2=0.9124  CV=0.9090±0.0328  (0.65s)
+Red neuronal (MLP) MAE=   4,393,109  RMSE=   7,551,002  R2=0.9791  CV=0.9818±0.0044  (3.53s)
+
+>>> Mejor modelo: Red neuronal (MLP)
+
+Modelo guardado en:    C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\modelo\modelo_ideale.joblib
+Evidencias guardadas en: C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\evidencias
+--- paso2_entrenar_modelo.py: OK (2165.7 s)
+
+>>> PASO 3 - Preparar archivos para Weka  (18:09:56)
+----------------------------------------------------------------------
+Archivo creado: C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\data\weka\dataset_ideale_precio_rango.arff
+Archivo creado: C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\data\weka\dataset_ideale_precio_rango_sin_modelo.arff
+  Barato  $     5,000,000 - $    25,500,000  (334 carros)
+  Medio   $    25,500,000 - $    63,500,000  (333 carros)
+  Caro    $    63,500,000 - $   411,100,000  (333 carros)
+--- paso3_preparar_weka.py: OK (1.9 s)
+
+======================================================================
+Fin    : 2026-11-03 18:09:58 (total 2168.8 s)
+Evidencias en: C:\Users\crisf\Desktop\IA\IDEALE_proyecto\proyecto_venta_carros\evidencias
+======================================================================

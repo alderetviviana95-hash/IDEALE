@@ -1,0 +1,5 @@
+hiddenLayers,Accuracy (%),Precision (%),Recall (%),F-Measure (%),Barato->Barato,Barato->Medio,Barato->Caro,Medio->Barato,Medio->Medio,Medio->Caro,Caro->Barato,Caro->Medio,Caro->Caro
+3,71.80,72.46,71.80,72.00,241,92,1,54,206,73,1,61,271
+5,72.10,71.42,72.10,71.64,249,84,1,81,179,73,4,36,293
+10,72.70,72.43,72.70,72.54,252,79,3,76,193,64,2,49,282
+"10,5",71.60,71.17,71.60,71.34,252,78,4,83,184,66,4,49,280
